@@ -1,0 +1,16 @@
+
+@mixin location-elem($horizontally:center, $vertically:center, $typeFlex: flex){
+  display: $typeFlex;
+  justify-content: $horizontally;
+  align-items: $vertically;
+}
+
+@mixin decreaseValue_percent($value1, $value2) {
+  width: $value1 - $value2;
+}
+
+@mixin styleText_TimesNewRoman($size:18px, $spacing:2px) {
+  font-family:  Times, Times New Roman, serif;
+  font-size: $size;
+  letter-spacing: $spacing;
+}

@@ -1,0 +1,97 @@
+@import "../../theme/main";
+
+preisrechner-directive {
+
+  .tarifergebnis-content{
+    @include location-elem(flex-start, flex-start);
+    height: 100vh;
+
+    flex-direction: column;
+    border-left: 1px solid $border_field_gray;
+
+    .tarifergebnis-header{
+      @include location-elem();
+      width: 100%;
+      height: $size_header;
+      background-color: $ecoop_blue;
+
+      span {
+        color: $color_text_white;
+        font-size: $size_text_lg;
+      }
+    }
+
+    .tarifergebnis-title {
+      width: 100%;
+      @include location-elem(space-between);
+
+      background-color: $ecoop_blue;
+      border-top: 1px solid $border_field_white;
+      padding: $padding_inner_sm;
+
+      .name-tar {
+        float: left;
+        font-size: $size_text_lg;
+        color: $color_text_white;
+      }
+
+     .count {
+       font-size: $size_text_lg;
+        color: $color_text_white;
+      }
+    }
+
+    .slides{
+      width: 100%;
+      padding: 0 $padding_inner_equally_xs;
+      background-color: $ecoop_blue;
+
+      .chart-block {
+        padding: $padding_inner_equally_sm 0;
+      }
+
+      ion-slides{
+        @include location-elem();
+        border-top: 1px solid $border_field_white;
+        border-bottom: 1px solid $border_field_white;
+        padding: 15px 0;
+
+        .swiper-pagination-bullet{
+          background-color: $color_text_white;
+        }
+
+        .swiper-container-horizontal{
+          .swiper-pagination {
+            padding: 15px 0;
+            bottom: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-action {
+    @include location-elem();
+    width: 100%;
+    background-color: $ecoop_blue;
+
+    button {
+      border: none;
+      width: 40%;
+    }
+
+    button {
+      color: $color_text_gray;
+      background-color: $background_white;
+      border-radius: 3px;
+      padding: $padding_inner_sm;
+      margin: $margin_xs;
+      text-transform: uppercase;
+    }
+
+    button:nth-child(2) {
+      color: $color_text_white;
+      background-color: $background_violet;
+    }
+  }
+}

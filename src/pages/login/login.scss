@@ -1,0 +1,71 @@
+@import "../../theme/main";
+
+page-login {
+  @include styleText_TimesNewRoman();
+  ion-content {
+    background: $ecoop_radial;
+
+    div {
+      @include location-elem(center, center);
+      flex-direction: column;
+      height: inherit;
+
+      img{
+        margin-bottom: $margin_sm;
+      }
+
+      form {
+        width: 40%;
+
+        div {
+          @include location-elem(center, left);
+          margin-bottom: $margin_sm;
+          label {
+            color: $color_text_white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: normal;
+            margin-bottom: 3px;
+            font-size: $size_text_xs;
+          }
+
+          input {
+            width: 100%;
+            height: $size_height_input;
+            background-color: $background_transparent;
+            border: 2px solid $border_field_white;
+            padding: $padding_inner_xs;
+            color: $color_text_white;
+          }
+        }
+      }
+    }
+
+    .action {
+      @include location-elem(space-between, stretch);
+      flex-direction: row;
+      margin-top: $margin_mg !important;
+
+      button {
+        @include decreaseValue_percent($size_procent_sm, 2%);
+        letter-spacing: 2px;
+        background-color: $background_transparent;
+        border: 2px solid $border_field_white;
+        padding: $padding_inner_sm;
+        text-transform: uppercase;
+        color: $color_text_white;
+      }
+
+      button:hover {
+        background-color: $background_white;
+        color: $ecoop_blue;
+      }
+    }
+
+    .forget-password {
+      @include location-elem(flex-start);
+      margin-top: $margin_lg;
+      color: $color_text_white;
+    }
+  }
+}

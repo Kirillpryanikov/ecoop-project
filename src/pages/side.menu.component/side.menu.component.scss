@@ -1,0 +1,80 @@
+@import "../../theme/main";
+
+side-menu-directive {
+
+  div {
+    position: relative;
+    overflow: auto;
+    width: $width_menu;
+    height: 100%;
+    background-color: $ecoop_blue;
+    float: left;
+    flex-direction: column;
+
+    .logo-image {
+      @include location-elem(center, center);
+
+      height: $height_menu_item;
+    }
+
+    .profile-image {
+      @include location-elem(flex-start center);
+      width: 100%;
+      height: $height_menu_item;
+      margin-bottom: $margin_lg;
+      ion-icon {
+        font-size: $size_text_b2;
+        color: $background_white;
+      }
+    }
+
+    .menu-item {
+      @include location-elem(flex-start center);
+      //margin-top: $margin_xs;
+      width: 100%;
+      height: $height_menu_item;
+      padding-top: 8px;
+
+      ion-icon {
+        padding: 0 7px;
+        font-size: $size_text_b;
+        color: $color_text_white;
+        border: 2px solid $color_text_white;
+        border-radius: 3px;
+      }
+
+      div {
+        @include location-elem();
+        color: $color_text_white;
+        text-transform: uppercase;
+        font-size: $size_text_xs;
+      }
+    }
+
+    .footer-menu {
+      position: absolute;
+      bottom: 0;
+      @include location-elem( space-around, flex-end);
+      flex-direction: row;
+      margin-top: $margin_sm;
+      width: 100%;
+      height: $height_menu_item;
+      flex-grow:1;
+
+      ion-icon {
+        color: $color_text_white;
+        font-size: $size_text_b;
+        margin-bottom: $margin_xs;
+      }
+    }
+  }
+
+  .active-item {
+    background-color: $active_menu_item;
+
+    div, ion-icon {
+      background-color: $active_menu_item;
+    }
+
+  }
+}

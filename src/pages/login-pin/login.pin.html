@@ -1,0 +1,32 @@
+<ion-content padding>
+  <div class="wrapper-login-pin">
+    <img src="../../assets/imgs/eccop_logo.png" width="25%"/>
+    <div class="field-number">
+      <div *ngFor="let field of [1,2,3,4,5]; let i = index" id="field{{field}}">
+        <ion-icon [ngClass]="{'icon-show': i < enteredNumbers.length }" class="icon-hidden" name="ios-medical"></ion-icon>
+      </div>
+    </div>
+    <div class="keyboard" #containerKeyboard>
+      <div class="row-keys">
+        <span *ngFor="let item of [1,2,3]" (click)="clickButton(item)">
+          {{item}}
+        </span>
+      </div>
+
+      <div class="row-keys">
+        <span *ngFor="let item of [4,5,6]" (click)="clickButton(item)">
+          {{item}}
+        </span>
+      </div>
+
+      <div class="row-keys">
+        <span *ngFor="let item of [7,8,9]" (click)="clickButton(item)">
+          {{item}}
+        </span>
+      </div>
+      <div class="row-keys">
+        <span (click)="clickButton(0)">0</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

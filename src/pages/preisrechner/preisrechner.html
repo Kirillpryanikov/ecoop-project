@@ -1,0 +1,173 @@
+<div>
+
+  <!--Rechner block-->
+
+  <div class="rechner-content">
+    <div class="rechner-header">
+      <span>Rechner</span>
+    </div>
+    <div class="field-content">
+      <div class="item-rechner">
+        <span class="title-item-rechner">energy type</span>
+
+        <ion-segment [(ngModel)]="data.energieart"  color="light">
+          <ion-segment-button value="storm" class="gray-right-side">
+            <span>Electricity</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="gas">
+            <span>GAS</span>
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div class="item-rechner">
+        <span class="title-item-rechner">Tariff Type</span>
+
+        <ion-segment [(ngModel)]="data.tarifart"  color="light">
+          <ion-segment-button value="premium" class="gray-right-side">
+            <span>PREMIUM</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="basic">
+            <span>BASIC</span>
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div class="item-rechner">
+        <span class="title-item-rechner">Counter Type</span>
+
+        <ion-segment [(ngModel)]="data.zahlerart"  color="light">
+          <ion-segment-button value="slp" class="gray-right-side">
+            <span>SLP</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="ht/nt" class="gray-right-side">
+            <span>HT/NT</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="wärme">
+            <span>wärme</span>
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div class="item-rechner">
+        <span class="title-item-rechner">Contract period</span>
+
+        <ion-segment [(ngModel)]="data.vertragslaufzeit"  color="light">
+          <ion-segment-button value="1 monat" class="gray-right-side">
+            <span>1 month</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="12 monate" class="gray-right-side">
+            <span>12 months</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="24 monate">
+            <span>24 months</span>
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div class="item-rechner">
+        <span class="title-item-rechner">Customer type</span>
+
+        <ion-segment [(ngModel)]="data.kundenart"  color="light">
+          <ion-segment-button value="haushalt" class="gray-right-side">
+            <span>privat</span>
+          </ion-segment-button>
+
+          <ion-segment-button value="gewerbe">
+            <span>business</span>
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div class="item-rechner">
+        <span class="title-item-rechner">Consumption</span><br>
+        <input type="number" [(ngModel)]="data.verbrauch"/>
+        <label>kWh</label>
+      </div>
+
+      <div class="item-rechner-second">
+          <div class="first-block-40 contain-item-rechner-second">
+            <span class="title-item-rechner">ZIP</span>
+            <br>
+            <input type="number" [(ngModel)]="data.PLZ"/>
+          </div>
+
+          <div class="second-block contain-item-rechner-second ">
+            <span class="title-item-rechner">CITY</span><br>
+            <ion-item no-lines >
+              <ion-select [(ngModel)]="data.ORT" multiple="false">
+                <ion-option value="Regensburg1">Regensburg 1</ion-option>
+                <ion-option selected value="Regensburg2">Regensburg 2</ion-option>
+                <ion-option value="Regensburg3">Regensburg 3</ion-option>
+              </ion-select>
+            </ion-item>
+          </div>
+      </div>
+
+      <div class="item-rechner-second">
+        <div class="first-block-60 contain-item-rechner-second">
+          <span class="title-item-rechner">Street</span>
+          <br>
+          <input type="text" [(ngModel)]="data.strasse"/>
+        </div>
+
+        <div class="paddingLeft contain-item-rechner-second">
+          <span class="title-item-rechner">APT</span>
+          <br>
+          <input type="number" [(ngModel)]="data.HNR"/>
+        </div>
+      </div>
+      <div class="action">
+        <button>CALCULATE NOW</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Tarifergebnis-->
+
+  <div class="tarifergebnis-content">
+    <div class="tarifergebnis-header">
+      <span>Tarifergebnis</span>
+    </div>
+    <div class="tarifergebnis-title">
+      <span class="name-tar">Ecoop Strom</span>
+      <span class="count">675,79 &#8364;</span>
+    </div>
+    <div class="slides">
+      <ion-slides [options]="{page: true}" pager="true">
+        <ion-slide>
+          <!--Default span-->
+          <h3 style="color: white">Some Page</h3>
+        </ion-slide>
+        <ion-slide>
+          <div class="chart-block">
+            <canvas baseChart
+                    [data]="pieChartData"
+                    [chartType]="pieChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+
+            </canvas>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="footer-action">
+      <button>Angebot</button>
+      <button>Vertrag</button>
+    </div>
+  </div>
+
+</div>

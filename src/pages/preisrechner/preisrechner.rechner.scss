@@ -1,0 +1,129 @@
+@import "../../theme/main";
+
+preisrechner-directive {
+
+  .rechner-content{
+
+    width: 40%;
+    float: left;
+    @include location-elem();
+    flex-direction: column;
+
+    .rechner-header {
+      @include location-elem();
+      width: 100%;
+      height: $size_header;
+      background-color: $ecoop_blue;
+
+      span {
+        color: $color_text_white;
+        font-size: $size_text_lg;
+        //text-transform: uppercase;
+      }
+    }
+
+    .field-content{
+      @include styleText_TimesNewRoman(12px, 1px);
+
+      padding: $padding_inner_equally_lg;
+      width: 100%;
+
+      .item-rechner {
+
+        ion-segment{
+          border: 1px solid $color_text_gray;
+          margin-bottom: $margin_sm;
+        }
+
+        ion-segment-button  {
+          color: $color_text_gray;
+          span{
+            text-transform: uppercase;
+          }
+
+          &.segment-activated{
+            span {
+              color: $color_text_black !important;
+            }
+          }
+        }
+
+        input {
+          padding: $padding_inner_xs;
+          font-size: 15px;
+        }
+
+        label {
+          color: $color_text_gray;
+          padding: $padding_inner_xs;
+        }
+      }
+
+      .item-rechner-second {
+        margin-top: $margin_xs;
+        @include location-elem(flex-start, flex-start);
+        flex-direction: row;
+
+        .contain-item-rechner-second {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .paddingLeft {
+          padding: 0 0 0 10px;
+        }
+
+        input {
+          width: 100%;
+          padding: $padding_inner_xs;
+          font-size: 15px;
+        }
+
+        .first-block-40 {
+          width: 40%;
+        }
+
+        .first-block-60 {
+          width: 60%;
+        }
+
+        .second-block {
+          margin-left: $margin_xs;
+        }
+
+        ion-item {
+          border: none !important;
+          padding: 0;
+
+          ion-select {
+            border: 1px solid $border_field_gray;
+            padding: $padding_inner_xs;
+            margin-top: -3px;
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .title-item-rechner{
+        text-transform: uppercase;
+        color: $color_text_gray;
+      }
+    }
+
+    .action > button{
+      width: 100%;
+      @include location-elem();
+      @include styleText_TimesNewRoman();
+      background-color: $background_orange;
+      border-radius: 2px;
+      color: $color_text_white;
+      padding: $padding_inner_sm;
+      margin-top: $margin_mg;
+    }
+  }
+
+  .gray-right-side {
+    border-right-color: $color_text_gray !important;
+  }
+}
