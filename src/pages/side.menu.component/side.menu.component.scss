@@ -52,12 +52,11 @@ side-menu-directive {
     }
 
     .footer-menu {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       @include location-elem( space-around, flex-end);
       flex-direction: row;
       margin-top: $margin_sm;
-      width: 100%;
       height: $height_menu_item;
       flex-grow:1;
 

@@ -4,11 +4,14 @@ preisrechner-directive {
 
   .tarifergebnis-content{
     @include location-elem(flex-start, flex-start);
-    height: 100vh;
 
     flex-direction: column;
     border-left: 1px solid $border_field_gray;
 
+    .tarifergebnis-body {
+      overflow: auto;
+      height: $size_page_without_header;
+    }
     .tarifergebnis-header{
       @include location-elem();
       width: 100%;

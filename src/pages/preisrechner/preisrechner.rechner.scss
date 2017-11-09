@@ -2,11 +2,9 @@
 
 preisrechner-directive {
 
-  .rechner-content{
-
+  .rechner-content {
     width: 40%;
     float: left;
-    @include location-elem();
     flex-direction: column;
 
     .rechner-header {
@@ -18,18 +16,17 @@ preisrechner-directive {
       span {
         color: $color_text_white;
         font-size: $size_text_lg;
-        //text-transform: uppercase;
       }
     }
 
     .field-content{
-      @include styleText_TimesNewRoman(12px, 1px);
-
-      padding: $padding_inner_equally_lg;
+      overflow: auto !important;
+      height: $size_page_without_header;
       width: 100%;
 
+      @include styleText_TimesNewRoman(12px, 1px);
+      padding: $padding_inner_equally_lg;
       .item-rechner {
-
         ion-segment{
           border: 1px solid $color_text_gray;
           margin-bottom: $margin_sm;
@@ -40,7 +37,6 @@ preisrechner-directive {
           span{
             text-transform: uppercase;
           }
-
           &.segment-activated{
             span {
               color: $color_text_black !important;
@@ -52,7 +48,6 @@ preisrechner-directive {
           padding: $padding_inner_xs;
           font-size: 15px;
         }
-
         label {
           color: $color_text_gray;
           padding: $padding_inner_xs;
@@ -121,6 +116,7 @@ preisrechner-directive {
       padding: $padding_inner_sm;
       margin-top: $margin_mg;
     }
+
   }
 
   .gray-right-side {

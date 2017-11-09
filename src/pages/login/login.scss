@@ -4,7 +4,6 @@ page-login {
   @include styleText_TimesNewRoman();
   ion-content {
     background: $ecoop_radial;
-
     div {
       @include location-elem(center, center);
       flex-direction: column;
@@ -15,8 +14,6 @@ page-login {
       }
 
       form {
-        width: 40%;
-
         div {
           @include location-elem(center, left);
           margin-bottom: $margin_sm;

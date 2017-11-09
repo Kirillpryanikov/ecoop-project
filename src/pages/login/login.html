@@ -1,7 +1,9 @@
 <ion-content padding>
   <div>
     <img src="../../assets/imgs/eccop_logo.png" width="30%">
-    <form #f="ngForm" (ngSubmit)="goLoginPin(f)">
+
+    <form #f="ngForm" (ngSubmit)="goLoginPin(f)" col-sm-10 col-md-8 col-lg-5 >
+
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" ngModel name="username" class="form-control" id="username" required>
