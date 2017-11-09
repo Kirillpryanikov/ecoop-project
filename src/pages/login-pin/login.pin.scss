@@ -9,22 +9,23 @@ page-login-pin {
       height: 100%;
       flex-direction: column;
 
-      img{
+      img {
         margin-bottom: $margin_sm;
       }
 
       .field-number {
+        width: 270px;
+        @include location-elem(space-between, center, inline-flex);
+
         div {
-          @include location-elem(center, center);
+          float: left;
           width: $size_side_square;
           height: $size_side_square;
           border:  2px solid $border_field_white;
-          display: inline-block;
-          margin: $margin_lg $margin_xss;
+          margin-bottom: 46px;
 
           .icon-hidden {
             opacity: 0;
-            @include location-elem();
             height: 100%;
             color: $color_text_white;
             font-size: $size_text_b;
@@ -33,21 +34,30 @@ page-login-pin {
           .icon-show {
             opacity: 1 !important;
           }
+
+          ion-icon {
+            @include location-elem();
+
+          }
         }
       }
 
-
-
       .keyboard {
-        .row-keys {
-          @include location-elem();
-          span{
+        width: $width_keyboard;
+        height: $height_keyboard;
+
+        .row-keys, .last-keys {
+          width: 100%;
+          display: inline-flex;
+          justify-content: space-between;
+          margin-bottom: $margin_keyboard_item;
+
+          span {
             @include location-elem();
             border-radius: 50%;
             border: 2px solid $border_field_white;
             width: $size_side_item_keyboard;
             height: $size_side_item_keyboard;
-            margin: $margin_xs;
             color: $color_text_white;
             font-size: $size_text_lg;
           }
@@ -56,6 +66,10 @@ page-login-pin {
             background-color: $background_white;
             color: $ecoop_blue;
           }
+        }
+
+        .last-keys{
+          @include location-elem();
         }
       }
     }

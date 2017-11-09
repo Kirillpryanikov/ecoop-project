@@ -1,7 +1,6 @@
 <ion-content padding>
   <div>
-    <img src="../../assets/imgs/eccop_logo.png" width="30%">
-
+    <img src="../../assets/imgs/eccop_logo.png" width="250" height="72">
     <form #f="ngForm" (ngSubmit)="goLoginPin(f)" col-sm-10 col-md-8 col-lg-5 >
 
       <div class="form-group">
@@ -13,8 +12,10 @@
         <label for="password">Passwort</label>
         <input type="password" ngModel name="password" class="form-control" id="password">
       </div>
-      <div class="action">
+      <div class="action paddingRight">
         <button class="btn btn-success">Registrieren</button>
+      </div>
+      <div class="action">
         <button type="submit" name="password" class="btn btn-success">Login</button>
       </div>
       <span class="forget-password">Passwort vergessen?</span>

@@ -1,6 +1,6 @@
 <ion-content padding>
   <div class="wrapper-login-pin">
-    <img src="../../assets/imgs/eccop_logo.png" width="25%"/>
+    <img src="../../assets/imgs/eccop_logo.png" width="250" height="72"/>
     <div class="field-number">
       <div *ngFor="let field of [1,2,3,4,5]; let i = index" id="field{{field}}">
         <ion-icon [ngClass]="{'icon-show': i < enteredNumbers.length }" class="icon-hidden" name="ios-medical"></ion-icon>
@@ -24,7 +24,7 @@
           {{item}}
         </span>
       </div>
-      <div class="row-keys">
+      <div class="last-keys">
         <span (click)="clickButton(0)">0</span>
       </div>
     </div>

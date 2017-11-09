@@ -4,6 +4,8 @@ page-login {
   @include styleText_TimesNewRoman();
   ion-content {
     background: $ecoop_radial;
+    @include location-elem(center, center);
+
     div {
       @include location-elem(center, center);
       flex-direction: column;
@@ -15,15 +17,19 @@ page-login {
 
       form {
         div {
+          width: $size_x_field;
+          height: $size_y_field;
+
           @include location-elem(center, left);
-          margin-bottom: $margin_sm;
+
           label {
             color: $color_text_white;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: 12px;
+            margin-bottom: 5px;
             font-style: normal;
-            margin-bottom: 3px;
-            font-size: $size_text_xs;
+            font-size: 13px;
           }
 
           input {
@@ -33,22 +39,29 @@ page-login {
             border: 2px solid $border_field_white;
             padding: $padding_inner_xs;
             color: $color_text_white;
+            font-size: $size_text_input;
           }
         }
       }
     }
 
+    .paddingRight {
+      margin-right: 8px;
+    }
+
     .action {
-      @include location-elem(space-between, stretch);
-      flex-direction: row;
-      margin-top: $margin_mg !important;
+      display: inline-flex;
+      padding-top: 12px;
+      margin-top: 30px;
+      width: $size_x_button;
+      height: $size_y_button;
 
       button {
-        @include decreaseValue_percent($size_procent_sm, 2%);
+        width: 100%;
         letter-spacing: 2px;
         background-color: $background_transparent;
         border: 2px solid $border_field_white;
-        padding: $padding_inner_sm;
+        padding: $padding_button;
         text-transform: uppercase;
         color: $color_text_white;
       }
@@ -61,8 +74,9 @@ page-login {
 
     .forget-password {
       @include location-elem(flex-start);
-      margin-top: $margin_lg;
       color: $color_text_white;
+      margin-top: 15px;
+      font-size: 14px;
     }
   }
 }

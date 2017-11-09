@@ -4,6 +4,7 @@ $size_text_lg: 1.5em;
 $size_text_b: 2em;
 $size_text_b2: 4em;
 
+
 $size_procent_xss: 30%;
 $size_procent_xs: 40%;
 $size_procent_sm: 50%;
@@ -26,9 +27,25 @@ $size_height_input: 50px;
 $size_header: 52px;
 $size_page_without_header: calc(100vh - 52px);
 
+/**Login page*/
+$size_x_field: 384px;
+$size_y_field: 80px;
+
+$size_text_label: 14px;
+$size_text_input: 17px;
+
+$size_x_button: 184px;
+$size_y_button: 60px;
+
+$padding_input: 15px 5px 14px 0;
+$padding_button: 16px 0 14px 0;
+
 /**Login pin page*/
-$size_side_square: 45px;
-$size_side_item_keyboard: 60px;
+$size_side_square: 40px;
+$size_side_item_keyboard: 62px;
+$width_keyboard: 232px;
+$height_keyboard: 306px;
+$margin_keyboard_item: 23px;
 
 /**Side Bar*/
 $width_menu: 91px;
