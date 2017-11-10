@@ -186,6 +186,10 @@ preisrechner-directive {
         font-size: 17px;
         margin: $margin_button;
       }
+
+      button:hover {
+        background-color: $color_text_light_gray;
+      }
     }
   }
 

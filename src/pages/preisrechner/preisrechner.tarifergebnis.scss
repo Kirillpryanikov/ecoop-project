@@ -108,5 +108,9 @@ preisrechner-directive {
       color: $color_text_white;
       background-color: $background_violet;
     }
+    button:hover {
+      background-color: $color_text_light_gray;
+      color: $color_text_gray;
+    }
   }
 }
