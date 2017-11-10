@@ -4,9 +4,9 @@ preisrechner-directive {
 
   .tarifergebnis-content{
     @include location-elem(flex-start, flex-start);
-
     flex-direction: column;
     border-left: 1px solid $border_field_gray;
+    width: $width_container_tarifergebnis;
 
     .tarifergebnis-body {
       overflow: auto;
@@ -14,24 +14,25 @@ preisrechner-directive {
     }
     .tarifergebnis-header{
       @include location-elem();
-      width: 100%;
+      width: 591px;
       height: $size_header;
       background-color: $ecoop_blue;
 
       span {
+        width: 109px;
+        height: $height_title;
         color: $color_text_white;
-        font-size: $size_text_lg;
+        font-size: 18px;
       }
     }
 
     .tarifergebnis-title {
-      width: 100%;
       @include location-elem(space-between);
 
+      width: 100%;
+      padding: $padding_title_tarifergebnis;
       background-color: $ecoop_blue;
       border-top: 1px solid $border_field_white;
-      padding: $padding_inner_sm;
-
       .name-tar {
         float: left;
         font-size: $size_text_lg;
@@ -46,20 +47,29 @@ preisrechner-directive {
 
     .slides{
       width: 100%;
-      padding: 0 $padding_inner_equally_xs;
-      background-color: $ecoop_blue;
+      //padding: 0 $padding_inner_equally_xs;
+      padding: 0 15px 0 15px;
 
+      background-color: $ecoop_blue;
+      height: $height_sliders;
       .chart-block {
-        padding: $padding_inner_equally_sm 0;
+        @include location-elem();
+        width: 100%;
+
+        canvas {
+          height: 148px !important;
+          width: 260px !important;
+          padding: 0 0 25px 25px;
+        }
       }
 
-      ion-slides{
+      ion-slides {
         @include location-elem();
         border-top: 1px solid $border_field_white;
         border-bottom: 1px solid $border_field_white;
         padding: 15px 0;
 
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
           background-color: $color_text_white;
         }
 
@@ -74,13 +84,15 @@ preisrechner-directive {
   }
 
   .footer-action {
-    @include location-elem();
+    @include location-elem(space-between);
     width: 100%;
     background-color: $ecoop_blue;
 
     button {
       border: none;
-      width: 40%;
+      width: $width_button_tarifergebnis;
+      height: $height_button_tarifergebnis;
+      margin: 20px 0 6px 10px;
     }
 
     button {

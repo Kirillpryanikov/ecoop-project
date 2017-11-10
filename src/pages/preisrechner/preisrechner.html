@@ -1,7 +1,5 @@
 <div>
-
   <!--Rechner block-->
-
   <div class="rechner-content">
     <div class="rechner-header">
       <span>Rechner</span>
@@ -90,22 +88,22 @@
         </ion-segment>
       </div>
 
-      <div class="item-rechner">
+      <div class="item-rechner-input">
         <span class="title-item-rechner">Consumption</span><br>
         <input type="number" [(ngModel)]="data.verbrauch"/>
         <label>kWh</label>
       </div>
 
       <div class="item-rechner-second">
-          <div class="first-block-40 contain-item-rechner-second">
+          <div class="contain-item-rechner-second margin-left">
             <span class="title-item-rechner">ZIP</span>
             <br>
             <input type="number" [(ngModel)]="data.PLZ"/>
           </div>
 
-          <div class="second-block contain-item-rechner-second ">
+          <div class="contain-item-rechner-second ">
             <span class="title-item-rechner">CITY</span><br>
-            <ion-item no-lines >
+            <ion-item no-lines>
               <ion-select [(ngModel)]="data.ORT" multiple="false">
                 <ion-option value="Regensburg1">Regensburg 1</ion-option>
                 <ion-option selected value="Regensburg2">Regensburg 2</ion-option>
@@ -115,19 +113,20 @@
           </div>
       </div>
 
-      <div class="item-rechner-second">
-        <div class="first-block-60 contain-item-rechner-second">
+      <div class="item-rechner-second-street">
+        <div class="contain-item-rechner-second">
           <span class="title-item-rechner">Street</span>
           <br>
           <input type="text" [(ngModel)]="data.strasse"/>
         </div>
 
-        <div class="paddingLeft contain-item-rechner-second">
+        <div class="contain-item-rechner-second">
           <span class="title-item-rechner">APT</span>
           <br>
-          <input type="number" [(ngModel)]="data.HNR"/>
+          <input class="hnr-input" type="number" [(ngModel)]="data.HNR"/>
         </div>
       </div>
+
       <div class="action">
         <button>CALCULATE NOW</button>
       </div>

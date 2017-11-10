@@ -26,6 +26,8 @@ $margin_mg: 40px;
 $size_height_input: 50px;
 $size_header: 52px;
 $size_page_without_header: calc(100vh - 52px);
+$size_side_item_sm: 24px;
+
 
 /**Login page*/
 $size_x_field: 384px;
@@ -49,7 +51,50 @@ $margin_keyboard_item: 23px;
 
 /**Side Bar*/
 $width_menu: 91px;
-$height_menu_item: 60px;
+$height_menu_item: 63px;
 
-$size_side_item_sm: 24px;
+$height_logo_menu: 24px;
+$width_logo_menu: 83px;
+$margin_logo_menu: 16px 4px 12px 4px;
+
+$height_avatar_menu: 54px;
+$width_avatar_menu: 54px;
+$margin_avatar_menu: 0 18px 50px 18px;
+
+$width_icon_menu: 91px;
+$height_icon_height: 25px;
+$width_label_icon_menu: 91px;
+$height_label_icon_menu: 14px;
+$margin_label_icon_menu: 7px 0;
+$margin_icon_menu: 10px 0 0 0;
+
+$margin_toolbar_menu: 0 0 23px 18px;
+$size_icon_footer_menu: 22px;
+
+/**preisrecher page*/
+$width_header_preisrecher : 341px;
+$height_header_preisrecher: 49px;
+
+$width_title: 76px;
+$height_title: 23px;
+
+$width_container_recher: 242px;
+$margin_container_recher: 25px 52px 0 47px;
+
+$margin_label_recher: 5px 0 0 1px;
+$width_label_recher: 121px;
+$height_label_recher: 14px;
+
+$height_block_action: 60px;
+$height_button: 40px;
+$margin_button: 20px 0 0 0;
+$margin_block_action: 60px 0 0 0;
+
+/**tarifergebnis page*/
+$width_container_tarifergebnis: 591px;
+$width_title_tarifergebnis: 477px;
+$padding_title_tarifergebnis: 8px 11px 7px 11px;
+$height_button_tarifergebnis: 40px;
+$width_button_tarifergebnis: 223px;
+$height_sliders: 181px;
 

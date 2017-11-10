@@ -1,9 +1,11 @@
 @import "../../theme/main";
 
+$this_width_input: 159px;
 preisrechner-directive {
 
   .rechner-content {
-    width: 40%;
+    width: $width_header_preisrecher;
+    height: $height_header_preisrecher;
     float: left;
     flex-direction: column;
 
@@ -14,19 +16,23 @@ preisrechner-directive {
       background-color: $ecoop_blue;
 
       span {
+        width: $width_title;
+        height: $height_title;
         color: $color_text_white;
-        font-size: $size_text_lg;
+        font-size: 18px;
       }
     }
 
     .field-content{
       overflow: auto !important;
       height: $size_page_without_header;
-      width: 100%;
+      width: $width_container_recher;
+      margin: $margin_container_recher;
 
       @include styleText_TimesNewRoman(12px, 1px);
-      padding: $padding_inner_equally_lg;
       .item-rechner {
+        margin-top: 9px;
+
         ion-segment{
           border: 1px solid $color_text_gray;
           margin-bottom: $margin_sm;
@@ -36,6 +42,7 @@ preisrechner-directive {
           color: $color_text_gray;
           span{
             text-transform: uppercase;
+            font-size: 11px !important;
           }
           &.segment-activated{
             span {
@@ -45,41 +52,62 @@ preisrechner-directive {
         }
 
         input {
-          padding: $padding_inner_xs;
-          font-size: 15px;
+          //padding: $padding_inner_xs;
+          //font-size: 15px;
         }
+
+        span {
+          width: $width_label_recher;
+          height: $height_label_recher;
+          margin: $margin_label_recher;
+        }
+
         label {
           color: $color_text_gray;
           padding: $padding_inner_xs;
         }
       }
 
+      .item-rechner-input{
+        margin-top: 9px;
+        span {
+          margin: 5px 0 1px 0;
+          color: $color_text_gray;
+        };
+        label {
+          color: $color_text_gray;
+          width: 34px;
+          height: 14px;
+          margin: 10px;
+        }
+
+        input{
+          width: 151px;
+          height: 30px;
+          font-size: 14px;
+          padding: 0 3px;
+        }
+      }
+
       .item-rechner-second {
-        margin-top: $margin_xs;
         @include location-elem(flex-start, flex-start);
         flex-direction: row;
+        margin-top: 10px;
 
         .contain-item-rechner-second {
-          width: 100%;
           flex-direction: column;
         }
 
-        .paddingLeft {
-          padding: 0 0 0 10px;
+        .margin-left{
+          margin-right: 9px;
         }
 
         input {
           width: 100%;
-          padding: $padding_inner_xs;
-          font-size: 15px;
-        }
-
-        .first-block-40 {
-          width: 40%;
-        }
-
-        .first-block-60 {
-          width: 60%;
+          height: 30px;
+          padding: 0 3px;
+          font-size: 14px;
+          margin-right: 9px;
         }
 
         .second-block {
@@ -89,37 +117,83 @@ preisrechner-directive {
         ion-item {
           border: none !important;
           padding: 0;
+          width: 159px;
+          height: 30px !important;
+
+          &.item-block {
+            min-height: 30px !important;
+          }
+          &.item-ios{
+            font-size: inherit;
+          }
 
           ion-select {
-            border: 1px solid $border_field_gray;
-            padding: $padding_inner_xs;
-            margin-top: -3px;
-            max-width: 100%;
-            width: 100%;
+            min-width: 159px;
+            padding: 5px 15px 5px 5px;
+
+            button {
+              border: 1px solid $border_field_gray;
+            }
           }
+
         }
       }
 
-      .title-item-rechner{
-        text-transform: uppercase;
-        color: $color_text_gray;
+
+      .item-rechner-second-street{
+        @include location-elem(flex-start, flex-start);
+        flex-direction: row;
+
+        .contain-item-rechner-second {
+          width: $this_width_input;
+          height: 50px;
+          margin:10px 9px 0 0;
+
+          span{
+            margin-top:5px;
+            height: 14px;
+            width: 100%;
+          }
+
+          .hnr-input{
+            width: 74px;
+          }
+
+          input {
+            height: 30px;
+            padding-left: 5px;
+            font-size: 14px;
+            width: $this_width_input;
+          }
+        }
       }
     }
 
-    .action > button{
-      width: 100%;
-      @include location-elem();
-      @include styleText_TimesNewRoman();
-      background-color: $background_orange;
-      border-radius: 2px;
-      color: $color_text_white;
-      padding: $padding_inner_sm;
-      margin-top: $margin_mg;
-    }
+    .action {
+      height: $height_block_action;
+      margin: $margin_block_action;
 
+      button {
+        @include location-elem();
+        @include styleText_TimesNewRoman();
+
+        width: 100%;
+        height: $height_button;
+        background-color: $background_orange;
+        border-radius: 2px;
+        color: $color_text_white;
+        font-size: 17px;
+        margin: $margin_button;
+      }
+    }
   }
 
   .gray-right-side {
     border-right-color: $color_text_gray !important;
+  }
+
+  .title-item-rechner{
+    text-transform: uppercase;
+    color: $color_text_gray;
   }
 }

@@ -2,6 +2,8 @@
 
 page-login {
   @include styleText_TimesNewRoman();
+  @include location-elem(center, center);
+
   ion-content {
     background: $ecoop_radial;
     @include location-elem(center, center);
@@ -16,10 +18,11 @@ page-login {
       }
 
       form {
+        justify-content: center;
+
         div {
           width: $size_x_field;
           height: $size_y_field;
-
           @include location-elem(center, left);
 
           label {

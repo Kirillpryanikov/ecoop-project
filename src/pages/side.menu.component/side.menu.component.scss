@@ -1,27 +1,31 @@
 @import "../../theme/main";
 
 side-menu-directive {
+  .wrapper-menu {
+    background: $ecoop_blue;
+  }
 
   div {
     position: relative;
-    overflow: auto;
     width: $width_menu;
     height: 100%;
-    background-color: $ecoop_blue;
+    @include location-elem(flex-start,center);
+
     float: left;
     flex-direction: column;
 
     .logo-image {
       @include location-elem(center, center);
-
-      height: $height_menu_item;
+      width: $width_logo_menu;
+      height: $height_logo_menu;
+      margin: $margin_logo_menu;
     }
 
     .profile-image {
       @include location-elem(flex-start center);
-      width: 100%;
-      height: $height_menu_item;
-      margin-bottom: $margin_lg;
+      width: $width_avatar_menu;
+      height: $height_avatar_menu;
+      margin: $margin_avatar_menu;
       ion-icon {
         font-size: $size_text_b2;
         color: $background_white;
@@ -29,42 +33,51 @@ side-menu-directive {
     }
 
     .menu-item {
-      @include location-elem(flex-start center);
-      //margin-top: $margin_xs;
-      width: 100%;
+      width: $width_menu;
       height: $height_menu_item;
-      padding-top: 8px;
-
-      ion-icon {
-        padding: 0 7px;
-        font-size: $size_text_b;
-        color: $color_text_white;
-        border: 2px solid $color_text_white;
-        border-radius: 3px;
-      }
 
       div {
-        @include location-elem();
+        @include location-elem(center center);
+        width: $width_icon_menu;
+        height: $height_icon_height;
+        margin: $margin_icon_menu;
+        color: $color_text_white;
+      }
+
+      span {
+        //@include location-elem(center center);
+        //width: $width_label_icon_menu;
+        height: 10pt;
         color: $color_text_white;
         text-transform: uppercase;
-        font-size: $size_text_xs;
+        font-size: 0.775em;
+        margin: $margin_label_icon_menu;
+
       }
     }
 
     .footer-menu {
+      @include location-elem(center center);
+      flex-direction: row;
       position: fixed;
       bottom: 0;
-      @include location-elem( space-around, flex-end);
-      flex-direction: row;
-      margin-top: $margin_sm;
-      height: $height_menu_item;
-      flex-grow:1;
+      height: 45px;
+      width: $width_menu;
 
-      ion-icon {
-        color: $color_text_white;
-        font-size: $size_text_b;
-        margin-bottom: $margin_xs;
+      img:nth-child(1) {
+        margin: $margin_toolbar_menu;
       }
+      img:nth-child(2) {
+        margin: 0 0 23px 17px;
+      }
+    }
+
+    .footer-time{
+      @include location-elem(center center);
+      position: fixed;
+      bottom: 6px;
+      font-size: 10px;
+      color: $color_text_white;
     }
   }
 

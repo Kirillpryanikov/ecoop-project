@@ -17,7 +17,7 @@ export class PreisrechnerComponent {
     verbrauch: 5000,
     kundenart: 'haushalt',
     PLZ:300,
-    ORT:'Regensburg',
+    ORT:'Regensburg 3',
     strasse: 'Halfnesteig',
     HNR: 6
   };
