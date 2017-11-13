@@ -1,7 +1,7 @@
 @import "../../theme/main";
 
 page-login {
-  @include styleText_TimesNewRoman();
+  //@include styleText_TimesNewRoman();
   @include location-elem(center, center);
 
   ion-content {
@@ -31,8 +31,8 @@ page-login {
             letter-spacing: 1px;
             margin-top: 12px;
             margin-bottom: 5px;
-            font-style: normal;
             font-size: 13px;
+            font-family: monaco;
           }
 
           input {
@@ -42,7 +42,8 @@ page-login {
             border: 2px solid $border_field_white;
             padding: $padding_inner_xs;
             color: $color_text_white;
-            font-size: $size_text_input;
+            font-size: $size_text_label;
+            font-family: Helvetica;
           }
         }
       }
@@ -50,6 +51,10 @@ page-login {
 
     .paddingRight {
       margin-right: 8px;
+    }
+
+    .marginRight {
+      margin-right: 12px;
     }
 
     .action {
@@ -61,12 +66,14 @@ page-login {
 
       button {
         width: 100%;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
         background-color: $background_transparent;
         border: 2px solid $border_field_white;
         padding: $padding_button;
         text-transform: uppercase;
+        font-family: Helvetica;
         color: $color_text_white;
+        font-size: 12px;
       }
 
       button:hover {
@@ -79,7 +86,8 @@ page-login {
       @include location-elem(flex-start);
       color: $color_text_white;
       margin-top: 15px;
-      font-size: 14px;
+      font-family: Helvetica;
+      font-size: $size_text_default;
     }
   }
 }

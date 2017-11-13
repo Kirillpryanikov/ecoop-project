@@ -50,9 +50,9 @@ side-menu-directive {
         height: 10pt;
         color: $color_text_white;
         text-transform: uppercase;
-        font-size: 0.775em;
+        font-size: 10px ;
         margin: $margin_label_icon_menu;
-
+        font-family: Helvetica;
       }
     }
 
@@ -72,7 +72,7 @@ side-menu-directive {
       }
     }
 
-    .footer-time{
+    .footer-time {
       @include location-elem(center center);
       position: fixed;
       bottom: 6px;
@@ -87,6 +87,5 @@ side-menu-directive {
     div, ion-icon {
       background-color: $active_menu_item;
     }
-
   }
 }

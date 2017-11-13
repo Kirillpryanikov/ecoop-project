@@ -23,31 +23,31 @@ preisrechner-directive {
         height: $height_title;
         color: $color_text_white;
         font-size: 18px;
+        font-family: monaco;
       }
     }
 
     .tarifergebnis-title {
       @include location-elem(space-between);
-
+      font-family: monaco;
       width: 100%;
       padding: $padding_title_tarifergebnis;
       background-color: $ecoop_blue;
       border-top: 1px solid $border_field_white;
       .name-tar {
         float: left;
-        font-size: $size_text_lg;
+        font-size: 24px;
         color: $color_text_white;
       }
 
      .count {
-       font-size: $size_text_lg;
+       font-size: 24px;
         color: $color_text_white;
       }
     }
 
     .slides{
       width: 100%;
-      //padding: 0 $padding_inner_equally_xs;
       padding: 0 15px 0 15px;
 
       background-color: $ecoop_blue;
@@ -57,7 +57,7 @@ preisrechner-directive {
         width: 100%;
 
         canvas {
-          height: 148px !important;
+          height: 147px !important;
           width: 260px !important;
           padding: 0 0 25px 25px;
         }
@@ -102,12 +102,15 @@ preisrechner-directive {
       padding: $padding_inner_sm;
       margin: $margin_xs;
       text-transform: uppercase;
+      font-size: 12px;
+      font-family: monaco;
     }
 
     button:nth-child(2) {
       color: $color_text_white;
       background-color: $background_violet;
     }
+
     button:hover {
       background-color: $color_text_light_gray;
       color: $color_text_gray;
